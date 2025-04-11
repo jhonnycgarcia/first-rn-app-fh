@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { useState } from 'react';
-import { PrimaryButton } from '../components/shared';
+import { Button } from 'react-native-paper';
 
 export const CounterScreen = () => {
 
@@ -9,11 +9,13 @@ export const CounterScreen = () => {
   return (
     <View style={styles.container}>
         <Text style={styles.title}>{counter}</Text>
-        <PrimaryButton
-            label="Incrementar"
-            onPress={() => setCounter(counter + 1)}
-            onLongPress={() => setCounter(0)}
-        />
+        <Button
+          mode="contained"
+          onPress={() => setCounter(counter + 1)}
+          onLongPress={() => setCounter(0)}
+        >
+          Incrementar
+        </Button>
     </View>
   );
 };

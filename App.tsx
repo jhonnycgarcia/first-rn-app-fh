@@ -1,12 +1,13 @@
 import { SafeAreaView } from 'react-native';
-import { HelloWorldScreen } from './src/presentation/screens/HelloWorldScreen';
 import { CounterScreen } from './src/presentation/screens/CounterScreen';
+import { PaperProvider } from 'react-native-paper';
 
 export function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      {/* <HelloWorldScreen name="Pedro Lars" /> */}
-      <CounterScreen />
-    </SafeAreaView>
+    <PaperProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <CounterScreen />
+      </SafeAreaView>
+    </PaperProvider>
   );
 }
