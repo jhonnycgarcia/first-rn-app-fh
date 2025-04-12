@@ -1,12 +1,12 @@
 import { SafeAreaView } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
-import { DimensionScreen } from './src/presentation/screens';
+import { PositionScreen } from './src/presentation/screens';
 
 export function App() {
   return (
     <PaperProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        <DimensionScreen />
+        <PositionScreen />
       </SafeAreaView>
     </PaperProvider>
   );
